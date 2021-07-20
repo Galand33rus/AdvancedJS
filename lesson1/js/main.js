@@ -3,25 +3,25 @@ const products = [
         id: 1,
         title: 'Notebook',
         price: 2000,
-        img: '../img/nout.jpg'
+        img: 'img/nout.jpg'
     },
     {
         id: 2,
         title: 'Mouse',
         price: 20,
-        img: '../img/mouse.jpg'
+        img: 'img/mouse.jpg'
     },
     {
         id: 3,
         title: 'Keyboard',
         price: 200,
-        img: '../img/keyboard.jpg'
+        img: 'img/keyboard.jpg'
     },
     {
         id: 4,
         title: 'Gamepad',
         price: 50,
-        img: '../img/gamepad.jpg'
+        img: 'img/gamepad.jpg'
     },
 ];
 
