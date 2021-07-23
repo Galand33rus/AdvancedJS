@@ -1,0 +1,99 @@
+@import "cart";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background:  rgb(33, 37, 41);
+	display: grid;
+	grid-template-rows: 100px 1fr 50px;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #fff;
+	padding: 0 25px ;
+}
+
+.logo {
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'Kaushan Script', cursive;
+	color: #2196f3;
+	font-size: 25px;
+	transition: .2s;
+	&:hover{
+		text-shadow: 0 0 10px #2196f3,  0 0 40px #2196f3,  0 0 80px #2196f3;
+	}
+}
+
+
+.products {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 100px;
+}
+
+.product-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+	width: 250px;
+	background-color: #fff;
+	transition: all .2s;
+	&:hover {
+		box-shadow: 0 0 10px 10px rgba(33, 150, 243, 0.3);
+	}
+	img {
+		height: 150px;
+		margin-bottom: 50px;
+		
+	}
+	&__title {
+		margin-bottom: 15px;
+	}
+	&__price {
+		margin-bottom: 10px;
+	}
+}
+
+.buy-btn {
+	padding: 10px 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: inherit;
+	cursor: pointer;
+	color: #fff;
+	background-color: #2196f3;
+	border-radius: 15px;
+	letter-spacing: 3px;
+	border: none;
+	transition: all .2s;
+	&:hover {
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.7);
+	}
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.footer {
+	border-top: 1px solid #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
