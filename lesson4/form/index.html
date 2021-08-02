@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!--Создать форму обратной связи с полями: Имя, Телефон, E-mail, текст, кнопка Отправить. При нажатии на кнопку отправить произвести валидацию полей следующим образом:-->
+<!--a. Имя содержит только буквы.-->
+<!--b. Телефон имеет вид +7(000)000-0000.-->
+<!--c. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.-->
+<!--d. Текст произвольный.-->
+<!--e. Если одно из полей не прошло валидацию, необходимо выделить это поле красной рамкой и сообщить пользователю об ошибке.-->
+<form action="#" class="form">
+  <label for="name">Имя</label>
+  <span class="error" id="name-error">Введите имя корректно</span>
+  <input type="text" id="name">
+  <label for="phone">Телефон</label>
+  <span class="error" id="phone-error">Формат телефона +7(000)000-0000</span>
+  <input type="text" id="phone" placeholder="+7(000)000-0000">
+  <label for="mail">E-mail</label>
+  <span class="error" id="mail-error">Введите e-mail корректно</span>
+  <input type="email" id="mail">
+  <label for="textarea">Введите текст</label>
+  <span class="error" id="textarea-error">Поле не должно быть пустым</span>
+  <textarea name="textarea" id="textarea" rows="5"></textarea>
+  <button class="btn" type="submit">Отправить</button>
+</form>
+<script src="main.js"></script>
+</body>
+</html>
