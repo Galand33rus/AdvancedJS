@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Интернет-магазин</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id="app">
+		<header class="header">
+			<div class="logo">
+				<a href="index.html" class="logo__link btn">shop
+					<span class="btn-t"></span>
+					<span class="btn-r"></span>
+					<span class="btn-b"></span>
+					<span class="btn-l"></span>
+				</a>
+			</div>
+			<div class="right-wrapper">
+				<form action="#" class="search-form" @submit="filterGoods(searchLine)">
+					<input type="text" class="search-field" v-model="searchLine">
+					<button class="btn-search" type="submit">
+						<span class="material-icons-outlined">search</span>
+					</button>
+				</form>
+				<div class="cart">
+					<button class="cart__btn" @click="isVisibleCart = !isVisibleCart">
+						<span class="cart__icon material-icons-outlined">shopping_cart</span>
+					</button>
+					<div v-show="isVisibleCart" class="cart__body">
+						<div v-show="isCartFull" class="cart-item" v-for="product of cartItem" :data-id="product.id_product">
+							<img class="cart-item__img" :src="imgCatalog" :alt="product.product_name">
+							<div class="cart-item__wrapper">
+								<p class="cart-item__title">{{ product.product_name }}</p>
+								<p class="cart-item__price">{{ product.price }} &#8381;</p>
+								<p class="cart-item__count">
+									<span>1</span>
+									<span>шт.</span>
+								</p>
+								<button class="cart-item__btn button">Удалить</button>
+							</div>
+						</div>
+						<div v-show="!isCartFull" class="goods-list">
+							<p>Нет данных</p>
+						</div>
+						<!-- <div class="cart__total">
+							<p class="cart__total-count">ИТОГО: 0 &#8381;</p>
+							<button class="cart__total-btn button">очистить</button>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="products">
+				<div class="product-item" v-for="product of products" :data-id="product.id_product">
+					<img :src="imgCatalog" :alt="product.product_name">
+					<h3 class="product-item__title">{{ product.product_name }}</h3>
+					<p class="product-item__price">{{ product.price }} &#8381;</p>
+					<button class="product-item__button button">Купить</button>
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
