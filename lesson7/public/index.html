@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Интернет-магазин</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id="app">
+		<header class="header">
+			<div class="logo">
+				<a href="index.html" class="logo__link btn">shop
+					<span class="btn-t"></span>
+					<span class="btn-r"></span>
+					<span class="btn-b"></span>
+					<span class="btn-l"></span>
+				</a>
+			</div>
+			<div class="right-wrapper">
+				<filterform></filterform>
+
+				<div class="cart">
+					<button class="cart__btn" @click="isVisibleCart = !isVisibleCart">
+						<span class="cart__icon material-icons-outlined">shopping_cart</span>
+					</button>
+					<cart :items="cartItem" :visibility="isVisibleCart" @remove="remove"></cart>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<error :error="error"></error>
+			<products :products="filtered" @add-product="addProduct"></products>
+		</main>
+		<footer class="footer">
+			<div class="copyright">&copy all rights reserved by GALAND</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/error.js"></script>
+	<script src="js/ProductComponent.js"></script>
+	<script src="js/CartComponent.js"></script>
+	<script src="js/filterGoods.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

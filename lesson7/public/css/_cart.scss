@@ -1,0 +1,95 @@
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2196f3;
+  letter-spacing: 4px;
+  font-size: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+  font-weight: bold;
+	text-align: center;
+}
+
+.btn:hover {
+  color: rgb(33, 37, 41);
+  background-color: #2196f3;
+  box-shadow: 0 0 10px #2196f3,  0 0 40px #2196f3,  0 0 80px #2196f3;
+  transition-delay: 0.75s;
+}
+
+.btn-t {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, #2196f3);
+  
+}
+
+.btn:hover .btn-t{
+   transition: 1s;
+   transition-delay: 0.25s;
+   left: 100%;
+  }
+  
+.btn-b {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  right: -100%;
+  background: linear-gradient(270deg, transparent, #2196f3);
+  
+}
+
+.btn:hover .btn-b{
+    transition: 1s;
+    transition-delay: 0.25s;
+    right: 100%;
+  }
+  
+.btn-r {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+  background: linear-gradient(180deg, transparent, #2196f3);
+  
+}
+
+.btn:hover .btn-r{
+    transition: 1s;
+    top: 100%;
+  }
+  
+.btn-l {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(0deg, transparent, #2196f3);
+  
+}
+
+.btn:hover .btn-l{
+    transition: 1s;
+ 
+    bottom: 100%;
+  }
+
+  .cart__icon {
+    display: block;
+  }

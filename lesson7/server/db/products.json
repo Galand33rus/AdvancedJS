@@ -1,0 +1,50 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "Клавиатура",
+    "price": 3600,
+    "img": "/img/keyboard.jpg"
+  },
+  {
+    "id_product": 457,
+    "product_name": "Геймпад",
+    "price": 9000,
+    "img": "/img/gamepad.jpg"
+  },
+  {
+    "id_product": 123,
+    "product_name": "Ноутбук",
+    "price": 95600,
+    "img": "/img/notebook.jpg"
+  },
+  {
+    "id_product": 456,
+    "product_name": "Мышка",
+    "price": 8000,
+    "img": "/img/mouse.jpg"
+  },
+  {
+    "id_product": 101,
+    "product_name": "Телефон",
+    "price": 89900,
+    "img": "/img/phone.jpg"
+  },
+  {
+    "id_product": 102,
+    "product_name": "Роутер",
+    "price": 33900,
+    "img": "/img/router.jpg"
+  },
+  {
+    "id_product": 103,
+    "product_name": "Наушники",
+    "price": 10000,
+    "img": "/img/headphones.jpg"
+  },
+  {
+    "id_product": 104,
+    "product_name": "Монитор",
+    "price": 40000,
+    "img": "/img/screen.jpg"
+  }
+]
